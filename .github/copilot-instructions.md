@@ -1,68 +1,34 @@
-```markdown name=README.md
-# Meta App Metadata
+# Copilot Instructions (Minimal)
 
-Repositório contendo metadados do aplicativo para Meta App Dashboard.
+## Propósito
+Fornecer instruções básicas para lidar com políticas obrigatórias de conformidade:
+- Política de Privacidade  
+- Termos de Uso  
+- Solicitação e Exclusão de Dados de Usuário  
 
-## App Info
-- **ID:** 25434790692795135
-- **Nome:** Nome de exibição
-- **Agente:** Agente Tupiniquin
-- **Categoria:** Bots do Messenger para empresas
-- **Email:** facebook@nelis.me
-
-## URLs
-- Política de Privacidade: `https://example.com/politica-privacidade`
-- Termos de Serviço: `https://example.com/termos`
-- Exclusão de Dados: `https://example.com/instrucoes-exclusao-dados`
+## Estrutura Recomendada
+```
+├── privacy-policy.md      # Política de Privacidade
+├── terms-of-use.md        # Termos de Uso
+└── data-deletion.md       # Procedimento de exclusão de dados
 ```
 
-```json name=app-metadata.json
-{
-  "appId": "25434790692795135",
-  "displayName": "Nome de exibição",
-  "agentName": "Agente Tupiniquin",
-  "contactEmail": "facebook@nelis.me",
-  "privacyPolicyUrl": "https://example.com/politica-privacidade",
-  "privacyPolicyDialog": "Política de Privacidade da caixa de diálogo Login e Detalhes do aplicativo",
-  "termsOfServiceUrl": "https://example.com/termos",
-  "termsOfServiceDialog": "Termos de Serviço da caixa de diálogo de Login e Detalhes do aplicativo",
-  "userDataDeletionUrl": "https://example.com/instrucoes-exclusao-dados",
-  "category": "Bots do Messenger para empresas",
-  "createdAt": "2024-01-15T00:00:00Z",
-  "updatedAt": "2024-01-15T00:00:00Z"
-}
-```
+## Requisitos Mínimos
+- Todos os arquivos devem estar em Markdown (.md).  
+- Devem conter:  
+  - Informações de contato do responsável.  
+  - Escopo de coleta e uso de dados.  
+  - Procedimentos para exclusão e correção de informações pessoais.  
 
-```yaml name=app-metadata.yaml
-appId: "25434790692795135"
-displayName: Nome de exibição
-agentName: Agente Tupiniquin
-contactEmail: facebook@nelis.me
-privacyPolicyUrl: https://example.com/politica-privacidade
-privacyPolicyDialog: Política de Privacidade da caixa de diálogo Login e Detalhes do aplicativo
-termsOfServiceUrl: https://example.com/termos
-termsOfServiceDialog: Termos de Serviço da caixa de diálogo de Login e Detalhes do aplicativo
-userDataDeletionUrl: https://example.com/instrucoes-exclusao-dados
-category: Bots do Messenger para empresas
-createdAt: 2024-01-15T00:00:00Z
-updatedAt: 2024-01-15T00:00:00Z
-```
+## Diretrizes de Validação
+- Verificar se os três arquivos existem no repositório.  
+- Garantir que cada documento tenha pelo menos:  
+  - Título (`# ...`)  
+  - Data de atualização (`Atualizado em: ...`)  
+  - Contato de suporte (`Email:` ou `Formulário:`)  
 
-```plain name=.gitignore
-node_modules/
-.DS_Store
-*.log
-.env
-config.json
-```
+## Instruções Gerais ao Agente
+- Não gerar documentação técnica além das políticas.  
+- Não incluir instruções de build, test ou CI/CD.  
+- Foco total em conformidade legal mínima exigida.  
 
-```plain name=LICENSE
-MIT License
-Copyright (c) 2024
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files, to deal in the Software
-without restriction, including without limitation the rights to use, copy,
-modify, merge, publish, distribute, sublicense, and/or sell copies of the
-Software, and to permit persons to whom the Software is furnished to do so.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED.
